@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Login"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center" />
+
+            <!-- Campo para ID -->
+            <Entry
+                x:Name="entryID"
+                Placeholder="Digite seu ID"
+                Keyboard="Default" />
+
+            <!-- Campo para Senha -->
+            <Entry
+                x:Name="entrySenha"
+                Placeholder="Digite sua Senha"
+                IsPassword="True"
+                Keyboard="Default" />
+
+            <!-- Botão OK -->
+            <Button
+                x:Name="btnOK"
+                Text="OK"
+                Clicked="OnOKClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Botão Limpar -->
+            <Button
+                x:Name="btnLimpar"
+                Text="Limpar"
+                Clicked="OnLimparClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Botão Crédito -->
+            <Button
+                x:Name="btnCredito"
+                Text="Crédito"
+                Clicked="OnCreditoClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
