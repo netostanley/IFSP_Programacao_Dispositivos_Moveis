@@ -33,7 +33,7 @@
 
         private void OnCreditoClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Créditos", "Autores: Eric Nahas, Armando Righi de Souza", "OK");
+            DisplayAlert("Créditos", "Autor: Ivaldo Fernandes Barros Neto", "OK");
         }
     }
 
