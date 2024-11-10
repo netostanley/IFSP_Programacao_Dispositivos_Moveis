@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TPMaui2.Views.DetalhesTarefaPage"
+             Title="Detalhes da Tarefa">
+
+    <StackLayout Padding="10">
+        <Label Text="Título" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+        <Label x:Name="LblTitulo" FontSize="18" Margin="0,0,0,20"/>
+
+        <Label Text="Descrição" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+        <Label x:Name="LblDescricao" FontSize="18" Margin="0,0,0,20"/>
+
+        <Label Text="Data de Criação" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+        <Label x:Name="LblDataCriacao" FontSize="18" Margin="0,0,0,20"/>
+
+        <Label Text="Prioridade" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+        <Label x:Name="LblPrioridade" FontSize="18" Margin="0,0,0,20"/>
+
+        <Button Text="Editar" Clicked="OnEditarClicked" Margin="0,10,0,0"/>
+    </StackLayout>
+</ContentPage>

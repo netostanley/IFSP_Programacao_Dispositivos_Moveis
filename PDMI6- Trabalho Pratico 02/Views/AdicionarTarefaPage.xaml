@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TPMaui2.Views.AdicionarTarefaPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="EntryTitulo" Placeholder="Título da Tarefa" />
+            <Editor x:Name="EditorDescricao" Placeholder="Descrição da Tarefa" />
+            <DatePicker x:Name="DatePickerDataCriacao" />
+            <Picker x:Name="PickerPrioridade">
+                <Picker.Items>
+                    <x:String>Alta</x:String>
+                    <x:String>Média</x:String>
+                    <x:String>Baixa</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Salvar" Clicked="OnSalvarClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

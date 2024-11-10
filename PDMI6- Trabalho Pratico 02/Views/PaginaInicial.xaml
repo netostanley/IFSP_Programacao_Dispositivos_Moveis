@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TPMaui2.Views.PaginaInicial"
+             Title="Lista de Tarefas">
+
+    <StackLayout>
+        <Button Text="Adicionar Tarefa" Clicked="OnAdicionarTarefaClicked" />
+
+        <CollectionView x:Name="ListaTarefas" SelectionMode="Single" SelectionChanged="OnItemSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Titulo}" FontSize="18" />
+                        <Label Text="{Binding Descricao}" FontSize="14" TextColor="Gray" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>
