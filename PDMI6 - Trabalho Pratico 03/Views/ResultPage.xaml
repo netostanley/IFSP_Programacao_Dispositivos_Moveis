@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MauiApp2.Views.ResultPage">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Package ID:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <Label Text="{Binding PackageId}" FontSize="Small" TextColor="#333333"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Status:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <Label Text="{Binding Status}" FontSize="Small" TextColor="#333333"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Shipping Date:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <Label Text="{Binding ShippingDate, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small" TextColor="#333333"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Estimated Delivery Date:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <Label Text="{Binding EstimatedDeliveryDate, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small" TextColor="#333333"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Current Location:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <Label Text="{Binding CurrentLocation}" FontSize="Small" TextColor="#333333"/>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Label Text="Event History:" FontAttributes="Bold" FontSize="Medium" TextColor="#333333"/>
+                    <CollectionView ItemsSource="{Binding EventHistory}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding .}" FontSize="Small" TextColor="#666666"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
