@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-windows</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>TodoApp.MAUI</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>TodoApp.MAUI</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.todoapp.maui</ApplicationId>
+		<ApplicationIdGuid>A41DBECD-7659-49B5-A0E9-30596115AE28</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">7.0.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">1.0.19041.0</TargetPlatformMinVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="Resources\Styles\Colors.xaml" />
+	  <EmbeddedResource Remove="Resources\Styles\Styles.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AndroidResource Include="Resources\Styles\Colors.xaml" />
+	  <AndroidResource Include="Resources\Styles\Styles.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.5.794" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="6.0.100-preview.5.794" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TodoApp.Data\TodoApp.Data.csproj" />
+	</ItemGroup>
+
+</Project>
